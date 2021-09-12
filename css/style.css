@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+.home {
+  padding: 3rem 5rem;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background: url("../images/desktop/image-hero.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.home::after {
+  content: " ";
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.home ul {
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+  font-size: 1rem;
+  padding: 0.4rem;
+  color: #fff;
+}
+
+ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.nav-bar.menu {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  padding: 4rem;
+  z-index: 2;
+  background: #000;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home h1 {
+  position: absolute;
+  top: 30%;
+  width: 50vw;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  border: 2px solid #fff;
+  font-size: 5rem;
+  padding: 5vh 5vw;
+  text-transform: uppercase;
+}
+
+.about {
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh 10vw;
+  position: relative;
+}
+
+.about img {
+  position: absolute;
+  bottom: 0;
+  width: 50vw;
+  height: auto;
+}
+.about .text-container {
+  width: 42vw;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  bottom: 0;
+  padding: 5rem;
+  padding-bottom: 0.5rem;
+}
+
+.about .text-container h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.about .text-container p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  color: #999;
+  line-height: 2rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.our-creations {
+  width: 80vw;
+  height: 160vh;
+  margin: 20vh 10vw;
+  position: relative;
+}
+
+.our-creations h1 {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.our-creations .btn {
+  position: absolute;
+  right: 0;
+  font-family: "Alata", sans-serif;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #000;
+  font-style: normal;
+  text-align: center;
+  padding: 0.5rem 3.5rem;
+  text-transform: uppercase;
+}
+
+.our-creations .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.image-container {
+  position: absolute;
+  top: 15vh;
+  width: 80vw;
+  height: 140vh;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.image-container .image-creations {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.image-container .image-creations::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.image-creations:hover {
+  background: rgba(224, 224, 224, 0.5);
+  color: #000;
+}
+
+.image-container .image-creations img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.image-container .image-creations p {
+  width: 90%;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.7rem;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+.footer {
+  width: 100%;
+  height: 28vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #000;
+  padding: 2rem 5rem;
+}
+.footer .nav-bar .logo {
+  margin-bottom: 1rem;
+}
+.footer .nav-bar {
+  width: 40vw;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .nav-bar ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .nav-bar ul li {
+  padding: 0.5rem;
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+}
+.icon-container a {
+  text-decoration: none;
+}
+.icon-container img {
+  margin: 1rem;
+}
+.icon-container p {
+  color: #999;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  * {
+    font-size: 14px;
+  }
+
+  .home {
+    background: url("../images/mobile/image-hero.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .logo img {
+    width: 150px;
+  }
+  .home ul {
+    width: 40vw;
+  }
+  .home h1 {
+    font-size: 3.5rem;
+    width: 60vw;
+    padding: 4vh 3vw;
+  }
+
+  ul li a {
+    display: block;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+  .about img {
+    width: 90vw;
+    position: absolute;
+    bottom: 0;
+  }
+  .about .text-container {
+    width: 50vw;
+    padding: 2rem;
+  }
+  .about .text-container h1 {
+    font-size: 2rem;
+  }
+  .about .text-container p {
+    font-size: 1rem;
+  }
+
+  .image-container .image-creations p {
+    font-size: 1.5rem;
+  }
+
+  .footer .nav-bar ul {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 10px;
+  }
+
+  .home {
+    background: url("../images/mobile/image-hero.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .logo img {
+    width: 150px;
+  }
+  .home ul {
+    width: 20vw;
+  }
+  .home h1 {
+    top: 40%;
+    font-size: 3.4rem;
+    padding: 4rem 1rem;
+  }
+  .home ul li a {
+    display: none;
+  }
+
+  .nav-bar.menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80vw;
+    height: 90vh;
+    margin: 2rem;
+  }
+
+  .nav-bar.menu ul li a {
+    display: block;
+    font-size: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 2rem 1rem;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 4rem;
+  }
+
+  .about {
+    width: 90vw;
+    height: 80vh;
+    margin: 10vh 5vw;
+    padding: 1rem;
+  }
+
+  .about img {
+    width: 90vw;
+    position: absolute;
+    top: 0;
+  }
+
+  .about .text-container {
+    width: 90vw;
+    bottom: 0;
+  }
+  .about .text-container h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about .text-container p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .our-creations {
+    height: 200vh;
+    margin: 10vh 10vw;
+  }
+  .our-creations .btn {
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    font-size: 1.5rem;
+  }
+  .image-container {
+    height: 175vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+  }
+  .image-creations {
+    overflow: hidden;
+  }
+  .image-container .image-creations img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    width: 100vw;
+    height: 60vh;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .nav-bar {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer .nav-bar ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer .nav-bar ul li {
+    text-align: center;
+    display: block;
+  }
+
+  .footer .nav-bar ul li a {
+    font-size: 1.2rem;
+  }
+
+  .icon-container {
+    width: 100%;
+  }
+
+  .icon-container p {
+    font-size: 1.3rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
